@@ -1,2 +1,5 @@
 node_modules
-secrets
+secrets/*
+!secrets/.gitkeep
+history/*
+!history/.gitkeep

@@ -18,9 +18,11 @@
   "homepage": "https://github.com/low-ghost/js-repl#readme",
   "dependencies": {
     "lexical-scope": "^1.2.0",
-    "lodash": "^4.15.0",
     "lib-connectwise": "^1.2.0",
+    "lib-db-postgres": "^1.2.1",
     "lib-framework": "~0.0.3",
-    "lib-db-postgres": "^1.2.1"
+    "lodash": "^4.15.0",
+    "redis": "^2.6.2",
+    "repl.history": "^0.1.3"
   }
 }
