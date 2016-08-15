@@ -1,0 +1,26 @@
+{
+  "name": "js-repl",
+  "version": "1.0.0",
+  "description": "better repl functionality for js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/low-ghost/js-repl.git"
+  },
+  "author": "Mike Bagwell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/low-ghost/js-repl/issues"
+  },
+  "homepage": "https://github.com/low-ghost/js-repl#readme",
+  "dependencies": {
+    "lexical-scope": "^1.2.0",
+    "lodash": "^4.15.0",
+    "lib-connectwise": "^1.2.0",
+    "lib-framework": "~0.0.3",
+    "lib-db-postgres": "^1.2.1"
+  }
+}
