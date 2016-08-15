@@ -13,7 +13,7 @@ const {
   R = false,
 } = process.env;
 
-const {
+const { global: {
   POSTGRES_HOST,
   POSTGRES_USER,
   POSTGRES_PASS,
@@ -21,7 +21,7 @@ const {
   CONNECTWISE_CID,
   CONNECTWISE_USER,
   CONNECTWISE_PASS,
-} = require(`./secrets/${APP_ENV}.json`);
+} } = require(`./secrets/${APP_ENV}.json`);
 
 const redisInfo = {
   port: 6379,
