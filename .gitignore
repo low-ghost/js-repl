@@ -3,3 +3,5 @@ secrets/*
 !secrets/.gitkeep
 history/*
 !history/.gitkeep
+scratch/*
+!scratch/.gitkeep

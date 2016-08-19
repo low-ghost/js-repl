@@ -1,9 +1,10 @@
 const lo = require('lodash');
 const fp = require('lodash/fp');
+const fs = require('fs');
+const path = require('path');
 const connectwiseApi = require('lib-connectwise');
 const postgresApi = require('lib-db-postgres').default;
 const redisApi = require('redis');
-const fs = require('fs');
 
 const {
   APP_ENV,
@@ -38,7 +39,7 @@ Promise.all([
     { logging: false }
   ),
   connect.s && connectwiseApi(CONNECTWISE_CID, CONNECTWISE_USER, CONNECTWISE_PASS, cwEnv),
-  connect.r && createClient(redisInfo.port, redisInfo.host),
+  connect.r && redisApi.createClient(redisInfo.port, redisInfo.host),
 ]).then(([ sequelize, connectwise, redis ]) => {
 
   // So that both short and long forms are available
@@ -58,6 +59,9 @@ Promise.all([
   for (name in scope.globals.exported)
     _context[scope.globals.exported[name]] = eval(scope.globals.exported[name]);
 
-  require('repl.history')(repl, './history/cw');
+  require('repl.history')(
+    repl,
+    `${process.env.HOME}/repo/js-repl/history/${path.basename(__filename)}`
+  );
 
 });

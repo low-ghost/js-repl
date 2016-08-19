@@ -1,0 +1,16 @@
+{
+  "name": "lo3",
+  "version": "1.0.0",
+  "description": "lodash 3 repl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Bagwell",
+  "license": "ISC",
+  "dependencies": {
+    "lexical-scope": "^1.2.0",
+    "lodash": "^3.10.1",
+    "repl.history": "^0.1.3"
+  }
+}
